@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método de Gauss</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/Calculadora-Sistemas-Lineares/assets/icons8-matrix.svg" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="container_menu">
+            <div class="buttons_container">
+                <a id="refresh-btn" class="top_btns">Calcular Novamente</a>
+                <a href="../index.html" class="top_btns">Voltar</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content_container">
+        <div class="header_container">
+            <h1>Método direto para resolução</h1>
+            <div class="input_container">
+                <label for="matrix-order">Ordem do sistema:</label>
+                <input type="number" id="matrix-order" min="2" step="1" value="2" required>
+                <button id="create-matrix-btn">Criar Matriz</button>
+            </div>
+        </div>
+
+        <div id="matrix-input" style="display: none;">
+            <h2 class="subtitle">Insira os valores na matriz: </h2>
+            <div class="matriz_container">
+                <div>
+                    <h3 class="matriz_title">Matriz A</h3>
+                    <table id="matrix-a"></table>
+                </div>
+                <div>
+                    <h3 class="matriz_title">Matriz B</h3>
+                    <table id="matrix-b"></table>
+                </div>
+            </div>
+            <button id="calculate-btn">Calcular</button>
+        </div>
+
+        <div id="result" style="display: none;">
+            <h2>Solução do Sistema</h2>
+            <div id="matrix-steps"></div>
+            <div id="matrix-l"></div>
+            <div id="matrix-u"></div>
+            <div id="matrix-p"></div>
+            <div id="solution"></div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Desenvolvido por Gabriel Gonçalves Pereira</h4>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

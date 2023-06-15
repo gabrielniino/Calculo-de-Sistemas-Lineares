@@ -2,63 +2,29 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <title>Sistemas Lineares</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cálculo Numérico</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="/Calculadora-Sistemas-Lineares/assets/icons8-matrix.svg" type="image/x-icon">
 </head>
 
 <body>
-    <header>
-        <h1>Sistemas Lineares</h1>
-    </header>
+  <header class="header">
+    <h1>Resolução de Sistemas lineares</h1>
 
-    <main>
-        <nav class="menu_buttons">
-            <button class="button_menu" onclick="showGauss()">Eliminação de Gauss</button>
-            <button class="button_menu" onclick="showSeidel()">Gauss-Seidel</button>
-        </nav>
-
-
-        <div id="gaussContainer" style="display: none;">
-            <div class="insert_matriz">
-                <label for="ordem">Insira a ordem do sistema:</label>
-                <input type="number" id="ordem-gauss">
-                    <button onclick="criarMatrizGauss()">Criar Matriz</button>
-            </div>
-
-            <div id="matrizInputsGauss"></div>
-
-            <br>
-
-            <button onclick="calcularSolucaoGauss()">Calcular</button>
-            <div id="resultadoGauss"></div>
-        </div>
-
-        <div id="seidelContainer" style="display: none;">
-            <label for="order">Insira a ordem do sistema:</label>
-            <input type="number" id="order-seidel" step="1">
-            <button onclick="createInputsSeidel()">Criar Matriz</button>
-
-            <br>
-
-            <div id="inputsSeidel"></div>
-
-
-
-            <div id="vector-bSeidel"></div>
-
-            <br>
-
-            <button onclick="calculateSeidel()">Calcular</button>
-
-            <br><br>
-
-            <div id="resultSeidel"></div>
-        </div>
+    <main class="content_container">
+      <div class="main_menu">
+        <a id="gauss-seidel" class="btns" href="./GaussElimination/gauss.html">Eliminação de Gauss</a>
+        <a id="gauss" class="btns" href="./GaussSeidel/seidel.html">Gauss-Seidel</a>
+      </div>
     </main>
-    <script src="script.js"></script>
+
+    <footer class="footer">
+      <p>Desenvolvido por Gabriel Gonçalves Pereira</h4>
+    </footer>
 </body>
 
 </html>
